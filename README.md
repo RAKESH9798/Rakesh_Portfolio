@@ -136,3 +136,5 @@ Date:18-05-2024
 
 Step-3: Navigation is Completed where i used "useState, useRef, useEffect" for handling humburger menu open/close functionality
 
+Step-4: Footer is completed with the use of "@fortawesome/fontawesome-free/css/all.min.css" for social media icon
+

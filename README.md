@@ -132,4 +132,7 @@ Step-2: Git initialization:
 
             i. git push -u origin main
 
-Step-3: 
+Date:18-05-2024
+
+Step-3: Navigation is Completed where i used "useState, useRef, useEffect" for handling humburger menu open/close functionality
+

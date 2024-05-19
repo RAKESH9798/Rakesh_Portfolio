@@ -23,7 +23,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <div className="navigation" ref={menuRef}>
+    <div className="navigation">
       <div className="brand">
         <h1><a href="#">PORTFOLIO</a></h1>
       </div>
@@ -32,7 +32,7 @@ const Navigation = () => {
         <span className="line"></span>
         <span className="line"></span>
       </div>
-      <div className={`nav-item ${menuOpen ? 'active' : ''}`}>
+      <div className={`nav-item ${menuOpen ? 'active' : ''}`}  ref={menuRef} >
         <ul className={`item-container ${menuOpen ? 'active' : ''}`}>
           <li className="item"><a href="#">About Me</a></li>
           <li className="item"><a href="#">Projects</a></li>

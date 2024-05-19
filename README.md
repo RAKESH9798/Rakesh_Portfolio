@@ -138,3 +138,7 @@ Step-3: Navigation is Completed where i used "useState, useRef, useEffect" for h
 
 Step-4: Footer is completed with the use of "@fortawesome/fontawesome-free/css/all.min.css" for social media icon
 
+Date: 19-05-2024
+
+Step: Header is completed.
+

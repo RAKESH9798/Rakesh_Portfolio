@@ -71,6 +71,20 @@
       align-items: center;
     }
 
+    .nav-item {
+      display: none;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: #212121;
+      z-index: 1000;
+    }
+  
+    .nav-item.active {
+      display: flex;
+      justify-content: center;
+    }
+
     .item{
         margin-top: 1rem;
     }

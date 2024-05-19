@@ -9,6 +9,10 @@ const Navigation = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu=()=>{
+    setMenuOpen(false);
+  }
+
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
@@ -22,6 +26,21 @@ const Navigation = () => {
     };
   }, []);
 
+  useEffect(()=>{
+    const handleResize=()=>{
+      if(window.innerWidth>768 && menuOpen){
+        closeMenu();
+      }
+    };
+
+    window.addEventListener('resize',handleResize);
+
+    return ()=>{
+      window.addEventListener('resize',handleResize);
+    };
+
+  },[menuOpen])
+
   return (
     <div className="navigation">
       <div className="brand">
@@ -34,10 +53,10 @@ const Navigation = () => {
       </div>
       <div className={`nav-item ${menuOpen ? 'active' : ''}`}  ref={menuRef} >
         <ul className={`item-container ${menuOpen ? 'active' : ''}`}>
-          <li className="item"><a href="#">About Me</a></li>
-          <li className="item"><a href="#">Projects</a></li>
-          <li className="item"><a href="#">Blogs</a></li>
-          <li className="item"><a href="#">Hire Me</a></li>
+          <li className="item"><a href="#" onClick={closeMenu}>About Me</a></li>
+          <li className="item"><a href="#" onClick={closeMenu}>Projects</a></li>
+          <li className="item"><a href="#" onClick={closeMenu}>Blogs</a></li>
+          <li className="item"><a href="#" onClick={closeMenu}>Hire Me</a></li>
         </ul>
       </div>
     </div>
